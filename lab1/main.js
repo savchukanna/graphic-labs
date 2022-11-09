@@ -97,12 +97,17 @@ function CreateSurfaceData() {
     for (let u = 0; u < 360; u += stepU) {
         for (let v = -1; v <= 1; v += stepV) {
             let z = v * v * Math.sqrt(1 - v);
-            let x = z * Math.cos(deg2rad(u));
-            let y = z * Math.sin(deg2rad(u));
-
-            vertexList.push(x, y, v);
+            vertexList.push(z * Math.cos(deg2rad(u)), z * Math.sin(deg2rad(u)), v);
         }
     }
+
+    for (let v = -1; v <= 1; v += stepV) {
+        for (let u = 0; u < 360; u += stepU) {
+            let z = v * v * Math.sqrt(1 - v);
+            vertexList.push(z * Math.cos(deg2rad(u)), z * Math.sin(deg2rad(u)), v);
+        }
+    }
+
     return vertexList
 }
 
