@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Lab1</title>
-<style>
-    body {
-        background-color: #EEEEEE;
-    }
-</style>
+    <title>PA#2</title>
+    <style>
+        body {
+            background-color: #EEEEEE;
+        }
+    </style>
 
-<script src="./Utils/trackball-rotator.js"></script>
-<script src="./Utils/m4.js"></script>
-<script src="./shader.gpu"></script>
-<script src="./main.js"></script>
+    <script src="./Utils/trackball-rotator.js"></script>
+    <script src="./Utils/m4.js"></script>
+    <script src="./shader.gpu"></script>
+    <script src="./main.js"></script>
 
 </head>
 <body onload="init()">
 
-<h1>Kiss Surface</h1>
+<h2>Practical assignment#2</h2>
 
-<h2>A Cube with "Trackball" Mouse Rotation</h2>
-
-<p id="message">Drag your mouse on the cube to rotate it.<br>
-(On a touch screen, you can use your finger.)</p>
+<div id="lightPostion">
+    <style>
+        #lightPostionX {
+            width: 600px;
+        }
+    </style>
+    <p>Angle light direction: -2 to 2
+    <p>
+    <p>
+        <label for="lightPostionX">X:</label>
+        <input id="lightPostionX" type="range" min="-2" max="2" step="0.05" onchange="Redraw()"/>
+    </p>
+</div>
 
 <div id="canvas-holder">
-   <canvas width="600" height="600" id="webglcanvas" style="background-color:red"></canvas>
+    <canvas width="600" height="600" id="webglcanvas" style="background-color:red"></canvas>
 </div>
 
 </body></html>
