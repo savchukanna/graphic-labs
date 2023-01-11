@@ -179,7 +179,6 @@ function createTextureCoordinates(){
     let stepV = 2 / (N - 1)
     for (let u = 0; u < 360; u += stepU) {
         for (let v = -1; v <= 1; v += stepV) {
-            let z = v * v * Math.sqrt(1 - v)
             resultCoordinates.push(deg2rad(u) / (2 * Math.PI), (v + 1) / 2)
             resultCoordinates.push(deg2rad(u + stepU)  / (2 * Math.PI), (v + 1) / 2)
         }
